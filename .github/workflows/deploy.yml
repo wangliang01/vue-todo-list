@@ -19,6 +19,9 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Generate Mock Data
+        run: npm run generate-mock
+
       - name: Build
         run: npm run build
 

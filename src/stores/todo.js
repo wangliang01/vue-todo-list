@@ -1,8 +1,9 @@
 import { defineStore } from 'pinia'
 import { ref, computed, watch } from 'vue'
 import { v4 as uuidv4 } from 'uuid'
-
-const API_BASE_URL = '/api/todos'
+const isDev = process.env.NODE_ENV === 'development'
+console.log('isDev', isDev)
+const API_BASE_URL = isDev ? '/vue-todo-list/api/todos' : '/vue-todo-list/mock/todos.json'
 
 export const useTodoStore = defineStore('todo', () => {
   // 状态
@@ -50,7 +51,7 @@ export const useTodoStore = defineStore('todo', () => {
       isLoading.value = true
       error.value = null
       console.log('Fetching todos...')
-      const response = await fetch('/api/todos', {
+      const response = await fetch(`${API_BASE_URL}`, {
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
