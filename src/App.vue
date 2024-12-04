@@ -89,7 +89,9 @@ onMounted(async () => {
               aria-label="Show in progress tasks"
             >
               In Progress
-              <span class="badge bg-primary ms-1 border-0">{{ store.inProgressCount }}</span>
+              <span class="badge bg-primary ms-1 border-0">{{
+                store.inProgressCount
+              }}</span>
             </span>
             <span
               class="nav-item"
@@ -216,7 +218,7 @@ onMounted(async () => {
   /* 调整 badge 样式 */
   .badge {
     font-size: 0.9rem;
-    padding: 0.4em 0.6em;
+    padding: 0.4em 0.5em !important;
   }
 
   /* 增加菜单项之间的间距 */
