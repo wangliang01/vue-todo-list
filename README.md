@@ -1,35 +1,57 @@
-# vue-todo-list
+# Vue Todo List
 
-This template should help get you started developing with Vue 3 in Vite.
+一个使用 Vue 3 + Pinia + Bootstrap 5.2 构建的待办事项应用。支持任务的创建、状态管理和删除，以及无限滚动加载等特性。
 
-## Recommended IDE Setup
+## 🌟 效果展示
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+![效果展示](screenshots/image.png)
 
-## Customize configuration
+## 🌟 特性
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- ✨ 创建、更新、删除和查看待办事项
+- 📱 响应式设计，支持移动端和桌面端
+- 🔄 任务状态管理（Todo -> In Progress -> Completed）
+- ♾️ 无限滚动加载
+- 🖼️ 任务卡片图片懒加载
+- 💾 本地数据持久化
+- ⌨️ 支持键盘导航
+- 🎨 美观的 UI 设计
 
-## Project Setup
+## 🛠️ 技术栈
 
-```sh
+- Vue 3
+- Pinia (状态管理)
+- Bootstrap 5.2 (UI 框架)
+- Vite (构建工具)
+- GitHub Pages (部署)
+
+## 🚀 在线演示
+
+访问 [Vue Todo List](https://wangliang01.github.io/vue-todo-list/) 查看在线演示。
+
+## 📦 本地开发
+
+1. 克隆项目
+
+```bash
+git clone https://github.com/wangliang01/vue-todo-list.git
+cd vue-todo-list
+```
+
+2. 安装依赖
+
+```bash
 pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+3. 生成 mock 数据
 
-```sh
+```bash
+pnpm generate-mock
+```
+
+4. 启动开发服务器
+
+```bash
 pnpm dev
-```
-
-### Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
 ```
